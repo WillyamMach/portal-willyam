@@ -3,9 +3,16 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST") {
         // post values
-        $userName = $_POST['registerName'];
+        $userName = $_POST['registerUser'];
         $userEmail = $_POST['registerEmail'];
         $userPassword = $_POST['registerPassword'];
+        $confirmUserPassword = $_POST['registerConfirmPassword'];
+
+        if($userPassword != $confirmUserPassword) {
+            header("Location: ../../index.php?error=passDif");
+            die();
+        }
+
         //query
         $select = $sql->prepare("INSERT INTO tb_users (usu_name, usu_email, usu_password) VALUES (:name, :email, :password)");
         // Injection protection
@@ -15,5 +22,5 @@
         // exec query
         $select->execute();
 
-        header('Location: ../../index.html');
+        header('Location: ../../index.php');
     }

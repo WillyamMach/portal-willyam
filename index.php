@@ -10,14 +10,19 @@
     <title>Document</title>
 </head>
 <body>
+    <?php if(isset($_GET['error'])) {
+        if($_GET['error'] == 'passDif') {
+            echo '<div><p>Senha Errado</p></div>';
+        }
+    } ?>
     <main class="mainDiv">
         <form class="register" action="src/php/insert.php" method="POST">
             <h1>Cadastro</h1>
             <div class="registerItems">
                 <input type="text" placeholder="User" id="registerUser" name="registerUser">
-                <input type="text" placeholder="Email" id="registerEmail" name="registerEmail">
-                <input type="text" placeholder="Passoword" id="registerPassword" name="registerPassword" >
-                <input type="text" placeholder="Confirm Password" id="registerConfirmPassword" name="registerConfirmPassword">
+                <input type="email" placeholder="Email" id="registerEmail" name="registerEmail">
+                <input type="password" placeholder="Password" id="registerPassword" name="registerPassword" >
+                <input type="password" placeholder="Confirm Password" id="registerConfirmPassword" name="registerConfirmPassword">
                 <div class="registerButtons">
             </div>
                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
