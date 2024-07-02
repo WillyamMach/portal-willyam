@@ -9,7 +9,7 @@
         $confirmUserPassword = $_POST['registerConfirmPassword'];
 
         if($userPassword != $confirmUserPassword) {
-            header("Location: ../../index.php?error=passDif");
+            header("Location: ../../tela_cadastro?error=passDif");
             die();
         }
 

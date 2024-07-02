@@ -8,15 +8,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #DDD;
+    background-color: #0d6efd;
 }
 
 .register {
     display: block;
     min-height: 50vh;
-    background-color: #f0eeee;
-    width: 18vw;
+    background-color: #f7f5f5;
+    width: 16vw;
     border-radius: 1em;
+    box-shadow: 10px 10px 10px 0px #002f86bf;
 }
 
 .registerItems input{
@@ -24,4 +25,27 @@ body {
     padding: 0.6em;
     width: 15vw;
     display: block;
+    border-radius: 1em;
+    border: 1px solid #000;
+}
+
+.signInButton:hover {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width:1400px) {
+    .register  {
+        width: 40vw;
+    }
+
+    .registerItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;;
+    }
+    .registerItems input {
+        width: 80%;
+    }
 }

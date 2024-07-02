@@ -11,28 +11,24 @@
 </head>
 <body>
     <main class="mainDiv">
-        <form class="register" action="src/php/verifyLogin.php" method="POST">
+        <form class="register" action="src/php/insert.php" method="POST">
         <?php if(isset($_GET['error'])) {
-            if($_GET['error'] == 'wPass') {
-                echo '<div class="alert alert-danger text-center mb-1 p-1 fs-3"><p>Password dont match</p></div>';
-            }
-            if($_GET['error'] == 'wEmail') {
-                echo '<div class="alert alert-danger text-center mb-1 p-1 fs-3"><p>Email dont exists</p></div>';
+            if($_GET['error'] == 'passDif') {
+                echo '<div class="alert alert-danger text-center mb-1 fs-3"><p>Password dont match</p></div>';
             }
         } ?>
-            <div class="d-flex justify-content-center align-center m-3">
-                <h1>Log In</h1>
+            <div class="d-flex justify-content-center align-center ">
+                <h1>Cadastro</h1>
             </div>
-            <div class="registerItems mt-3">
+            <div class="registerItems">
+                <input type="text" placeholder="User" id="registerUser" name="registerUser">
                 <input type="email" placeholder="Email" id="registerEmail" name="registerEmail">
                 <input type="password" placeholder="Password" id="registerPassword" name="registerPassword" >
+                <input type="password" placeholder="Confirm Password" id="registerConfirmPassword" name="registerConfirmPassword">
             </div>
             <div class="registerButtons p-2 mt-3 d-flex justify-content-center gap-2">
                 <button type="reset" class="btn btn-secondary" id="cancel">Cancel</button>
                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-            </div>
-            <div class="p-2 mt-3 d-flex justify-content-center mt-5">
-                <label>Are not registered? <a class="signInButton text-decoration-none" href="tela_cadastro">sign In</a><label>
             </div>
         </form>
     </main>
