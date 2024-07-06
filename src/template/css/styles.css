@@ -1,0 +1,58 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.mainDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #04c004;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    background-color: #f7f5f5;
+    width: 20vw;
+    border-radius: 1em;
+    box-shadow: #3eb918 0px 20px 30px -10px;
+}
+
+.registerItems input{
+    margin: 0.6em;
+    padding: 0.6em;
+    width: 15vw;
+    display: block;
+    border-radius: 1em;
+    border: 1px solid #ddd;
+}
+
+.signInButton:hover {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.bi .bi-piggy-bank-fill {
+    font-size: 3em;
+}
+
+@media (max-width:1400px) {
+    .register  {
+        width: 40vw;
+    }
+
+    .registerItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .registerItems input {
+        width: 80%;
+    }
+}

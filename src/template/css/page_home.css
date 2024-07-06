@@ -1,0 +1,30 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+
+    width: 100vw;
+    height: 8vh;
+    background-color: #0e6d0e;
+
+    .navbarItem {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 8vh;
+        width: 10%;
+        background-color: #095509;
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbarItemIcon {
+            font-size: 2em;
+        }
+    }
+
+}
